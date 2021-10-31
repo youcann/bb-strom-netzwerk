@@ -1,0 +1,120 @@
+\documentclass[10pt,a4paper,noendnumber=true]{scrartcl}
+%german umlauts and localization
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{dcolumn,booktabs}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+%figures etc.
+\usepackage[pdftex]{graphicx}
+\usepackage{standalone} %externalize files for faster compilation
+\usepackage{float}
+
+%mathematical symbols
+\usepackage{latexsym} % special symbols 
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{textcomp} % supports the Text Companion fonts, which provide many text symbols (such as baht, bullet, copyright, musicalnote, onequarter, section, and yen)
+%fonts:
+%\usepackage{txfonts}  %supplies virtual text roman fonts using Adobe Times % needs to be loaded AFTER amsmath (because otherwise \iint is defined twice)
+\usepackage{mathrsfs}  % for script-like fonts in math mode
+\usepackage{nicefrac} % nice fracs in text
+
+%\usepackage{libertine}
+%\usepackage[libertine]{newtxmath}
+%\usepackage[sc]{mathpazo}
+%\linespread{1.05}
+
+%tables
+\usepackage{tabularx}
+
+%units
+\usepackage{siunitx}
+
+%tikz
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{pgfplots} 
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+\usepackage[european]{circuitikz}
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.symbols,shadows}
+
+%bib stuff
+\usepackage[draft = false]{hyperref}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee]{biblatex}
+%\addbibresource{bib.bib}
+
+% gescheiter Abstand nach paragraph
+\newcommand{\properparagraph}[1]{\paragraph{\textcolor{Emerald}{#1}}\mbox{}\\}
+\usepackage[parfill]{parskip}
+
+% für die Auflistung von Vor- und Nachteilen in itemize-Umgebung
+\newcommand\pro{\item[$+$]}
+\newcommand\con{\item[$-$]}
+
+%nice row vector
+\newcommand{\rvect}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+
+%align multi pgfplots
+\pgfplotsset{yticklabel style={text width=3em,align=right}}
+
+%\usetikzlibrary{external}
+%\tikzexternalize[optimize=false,prefix=tikz/] % activate!
+
+\usepackage{subfig}
+\renewcommand{\arraystretch}{1.6}
+
+\title{Strom- und Netzwerk-Plan}
+\subtitle{Buchenberg}
+\author{}
+
+\usepackage{lscape}
+
+
+\begin{document}
+\maketitle
+
+\section{Strom}
+
+\section{Netzwerk}
+
+\begin{table}[H]
+	\centering
+	\caption{Netzwerkzuordnung}
+	\begin{tabular}{lll}
+		\toprule
+		Bezeichnung Dose & Bezeichnung Rack & Ort \\
+		\midrule
+		EG-01 & EG-01 & Büro (unten links)\\
+		EG-02 & EG-02 & Büro (unten links)\\
+		EG-03 & EG-03 & Esszimmer (hinter Fernseher)\\
+		EG-04 & EG-04 & Esszimmer (hinter Fernseher)\\
+		EG-05 & EG-05 & Wohnzimmer (hinter Fernseher)\\
+		EG-06 & EG-06 & Wohnzimmer (hinter Fernseher)\\
+		EG-07 & EG-07 & Flur (links der Waschmaschine)\\
+		EG-08 & EG-08 & Flur (links der Waschmaschine)\\
+		EG-09 & EG-09 & Büro (Regal)\\
+		\midrule
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\end{document}
+
